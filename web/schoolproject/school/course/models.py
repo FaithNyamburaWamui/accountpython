@@ -5,13 +5,14 @@ from django.db import models
 class Courses(models.Model):
     courses_name=models.CharField(max_length=20)
     courses_code=models.IntegerField()
-    courses_instuctor=models.CharField(max_length=20)
-    courses_assignment=models.CharField(max_length=20)
-    courses_level=models.CharField(max_length=20)
+    courses_TA=models.CharField(max_length=20)
+    courses_term=models.CharField(max_length=20)
+    courses_description=models.TextField()
     courses_department=models.CharField(max_length=20)
     courses_syllabus=models.CharField(max_length=20)
-    courses_exams=models.CharField(max_length=20)
-    courses_duration=models.IntegerField()
+    courses_instructor=models.CharField(max_length=20)
+    courses_duration=models.SmallIntegerField()
+    student_id=models.SmallIntegerField()
 
 
 def __str__(self):
